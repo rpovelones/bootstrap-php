@@ -1,0 +1,19 @@
+{
+    "name": "robertp/bootstrap-php",
+    "description": "A PHP helper library for Bootstrap 4.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Robert Povelones",
+            "email": "robert@rpdesignlab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RPD\\Bootstrap\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
