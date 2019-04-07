@@ -4,7 +4,7 @@ define('BSPHP_TAB_TEMPLATE_DIR', __DIR__.'/templates');
 
 require_once __DIR__ .'/../../src/Tab_Section.php';
 
-$tabs2 = [
+$tabs = [
   [
     'title'  => 'Tab One',
     'slug'   => 'tab-1',
@@ -12,7 +12,6 @@ $tabs2 = [
   [
     'title'  => 'Tab Two',
     'slug'   => 'tab-2',
-    'active' => true
   ]
 ];
 

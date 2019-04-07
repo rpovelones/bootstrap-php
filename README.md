@@ -1,29 +1,10 @@
 # Bootstrap PHP
 
-This library is for anyone who writes PHP and loves using Bootstrap but finds writing certain markup patterns tedious (I'm looking at you tab sections :wink:). So I've developed a few helper classes for outputting the markup in a more concise and clean fashion.
+This library is for anyone who writes PHP and loves using Bootstrap but finds writing some of the markup patterns tedious and a bit cumbersome (I'm looking at you tab sections :wink:). So I've developed a few helper classes for outputting the markup in a more concise and clean fashion.
 
-So now, instead of writing markup like this:
+[Check out a demo here →](https://rpdesignlab.com/libraries/bootstrap-php/demo/tabs/)
 
-```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-</div>
-```
-
-You can simply write:
+Now, we are able to write simple markup like the example below instead of wading through a sea of markup, making sure all of your ids and classes match up.
 
 ```php
 $tabs = new \RPD\Bootstrap\Tab_Section('myTab', [
