@@ -1,10 +1,10 @@
 # Bootstrap PHP
 
-This library is for anyone who writes PHP and loves using Bootstrap but finds writing some of the markup patterns tedious and a bit cumbersome (I'm looking at you tab sections :wink:). So I've developed a few helper classes for outputting the markup in a more concise and clean fashion.
+This library is for anyone who writes PHP and loves using Bootstrap but finds writing some of the markup patterns tedious and a bit cumbersome (I'm looking at you tab sections :wink:). With that in mind, I developed a few helper classes for outputting the markup in a more concise and clean fashion. This way, we can not only keep our code clean and easy to read, but hopefully less error prone from having to copy and paste so much markup.
 
 [Check out a demo here →](https://rpdesignlab.com/libraries/bootstrap-php/demo/tabs/)
 
-Now, we are able to write simple markup like the example below instead of wading through a sea of markup, making sure all of your ids and classes match up.
+Now, we are able to write simple markup like the example below instead of wading through a sea of markup, making sure all of our ids and classes match up.
 
 ```php
 $tabs = new \RPD\Bootstrap\Tab_Section('myTab', [
