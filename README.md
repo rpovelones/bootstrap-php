@@ -2,7 +2,49 @@
 
 This library is for anyone who writes PHP and loves using Bootstrap but finds writing certain markup patterns tedious (I'm looking at you tab sections :wink:). So I've developed a few helper classes for outputting the markup in a more concise and clean fashion.
 
-(Check out a demo here)[https://#]
+So now, instead of writing markup like this:
+
+```html
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+```
+
+You can simply write:
+
+```php
+$tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
+  [
+    'title'  => 'Home',
+    'slug'   => 'home',
+  ],
+  [
+    'title'  => 'Profile',
+    'slug'   => 'profile',
+  ],
+  [
+    'title'  => 'Contact',
+    'slug'   => 'contact',
+  ]
+]);
+<nav class="my-tab-nav">
+  <?php $tabs->output_nav(); ?>
+</nav>
+<?php $tabs->output_content(); ?>
+```
 
 ## Getting Started
 
