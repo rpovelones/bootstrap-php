@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css">
+
+    <style type="text/css">
+      section {
+        margin-bottom: 5rem;
+      }
+      pre code {
+        padding: 1rem !important;
+        padding-top: 0 !important;
+      }
+    </style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body class="p-5">
+
+    <div class="container">
+      <h1 class="mb-5">Bootstrap Tab Examples</h1>
+
+      <div class="col-md-10 mx-auto">
+
+        <section>
+          <h2 class="mb-4">Default</h2>
+          <pre>
+<code>
+&lt;?php
+$tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
+  [
+    'title'  => 'Tab One',
+    'slug'   => 'tab-1',
+  ],
+  [
+    'title'  => 'Tab Two',
+    'slug'   => 'tab-2',
+  ]
+]);
+?&gt;
+
+&lt;nav class="my-nav"&gt;
+  &lt;?php $tabs->output_nav(); ?&gt;
+&lt;/nav&gt;
+
+&lt;?php $tabs->output_content(); ?&gt;
+</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 class="mb-4">Pill Tabs with Fade</h2>
+          <pre>
+<code>
+&lt;?php
+$settings = [
+  'tab_nav_class' => 'nav-pills',
+  'fade' => true
+];
+
+$tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
+  [
+    'title'  => 'Tab One',
+    'slug'   => 'tab-1',
+  ],
+  [
+    'title'  => 'Tab Two',
+    'slug'   => 'tab-2',
+  ]
+], $settings);
+?&gt;
+
+&lt;nav class="my-nav"&gt;
+  &lt;?php $tabs->output_nav(); ?&gt;
+&lt;/nav&gt;
+
+&lt;?php $tabs->output_content(); ?&gt;
+</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 class="mb-4">Vertical Tabs</h2>
+          <pre>
+<code>
+&lt;?php
+$settings = [
+  'tab_nav_class' => 'nav-pills flex-column',
+  'fade' => true
+];
+
+$tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
+  [
+    'title'  => 'Tab One',
+    'slug'   => 'tab-1',
+  ],
+  [
+    'title'  => 'Tab Two',
+    'slug'   => 'tab-2',
+  ]
+], $settings);
+?&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-3"&gt;
+    &lt;nav class="my-nav"&gt;
+      &lt;?php $tabs->output_nav(); ?&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+  &lt;div class="col-9"&gt;
+    &lt;?php $tabs->output_content(); ?&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+          </pre>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

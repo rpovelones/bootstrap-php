@@ -7,7 +7,7 @@ This library is for anyone who writes PHP and loves using Bootstrap but finds wr
 ## Getting Started
 
 ```shell
-composer require rpovelones/bootstrap-php
+$ composer require rpovelones/bootstrap-php
 ```
 
 Or you can download this library and include the files you want in your project using `require` or `include`. Example:
@@ -27,7 +27,7 @@ require_once __DIR__ .'/../src/Tab_Section.php';
 
 ### `Tab_Section`
 
-Ref: (https://getbootstrap.com/docs/4.1/components/navs/#javascript-behavior)[https://getbootstrap.com/docs/4.1/components/navs/#javascript-behavior]
+Ref: [https://getbootstrap.com/docs/4.1/components/navs/#javascript-behavior](https://getbootstrap.com/docs/4.1/components/navs/#javascript-behavior)
 
 Outputs a BS tab nav and the related content sections. Tab content sections will load a PHP partial file from somewhere in your project. Configure the file path for these partials by defining the `BSPHP_TAB_TEMPLATE_DIR` contstant:
 
