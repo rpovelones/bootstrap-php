@@ -26,7 +26,7 @@ So now, instead of writing markup like this:
 You can simply write:
 
 ```php
-$tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
+$tabs = new \RPD\Bootstrap\Tab_Section('myTab', [
   [
     'title'  => 'Home',
     'slug'   => 'home',
@@ -40,10 +40,12 @@ $tabs = new \RPD\Bootstrap\Tab_Section('my_tab_section', [
     'slug'   => 'contact',
   ]
 ]);
-<nav class="my-tab-nav">
-  <?php $tabs->output_nav(); ?>
-</nav>
-<?php $tabs->output_content(); ?>
+
+// Output the tab nav
+$tabs->output_nav();
+
+// Output the content sections
+$tabs->output_content();
 ```
 
 ## Getting Started
